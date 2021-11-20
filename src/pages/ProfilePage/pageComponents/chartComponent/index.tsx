@@ -51,12 +51,6 @@ const ApexChart: React.FC = () => {
     },
   });
 
-  //constructor(props: any) {
-  //   super(props);
-  //
-  //   this.state = ;
-  // }
-
   return (
     <>
       <div id="chart">
