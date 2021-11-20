@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Barlow", sans-serif;
+  color: var(--black);
+  font-size: 14px;
+}
+
+.my-talent-card {
+  background: linear-gradient(
+    91.17deg,
+    #0c97aa 26.79%,
+    rgba(12, 151, 170, 0.46) 111.87%
+  );
+  border-radius: 10px;
+  padding: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: space-between;
+  margin: 10px 0px;
+}
+
+.left-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.user-image {
+  height: 50px;
+  border-radius: 100px;
+  border: #73F9D9 solid 4px;
+  margin-right: 14px;
+}
+
+.title {
+  font-weight: 500;
+  font-size: 18px;
+  margin-bottom: 4px;
+  color: white;
+}
+
+.text-area {
+  color: white;
+  margin-bottom: 2px;
+}
+
+.text-age {
+  font-size: 12px;
+  color: white;
+  margin-bottom: 2px;
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.button-icon {
+  background-color: transparent;
+  height: 30px;
+  width: 30px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0px 4px 4px;
+  cursor: pointer;
+}
+
+.button-icon:hover {
+  background: rgba(12, 151, 170, 0.4);;
+}
+
+.button-see-more {
+  background: #0C97AA;
+  border: none;
+  border-radius: 6px;
+  display: flex;
+  padding: 6px 12px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.button-text {
+  font-weight: 450;
+  font-size: 12px;
+  color: white;
+  margin-right: 20px;
+}
