@@ -2,12 +2,14 @@ section#next {
     text-align: right;
     margin-right: 10%;
     margin-top: 30px;
+    margin-bottom: 32px;
     padding: 5px 0;
 }
 
 section#next p{
     font-size: 1em;
     color: #0C97AA;
+    
 }
 
 section#next p img{

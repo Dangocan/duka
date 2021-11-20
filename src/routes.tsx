@@ -8,7 +8,7 @@ const Router = () => {
   return (
     <Routes>
         <Route path="/" element={<LandingPage/>}/>
-        <Route path="/profile" element={<ProfilePage/>}/>
+        <Route path="/perfil" element={<ProfilePage/>}/>
         {/* <Route path="/home" element={</>}/> */}
         {/* <Route path="/cursos" element={</>}/> */}
         <Route path="/aulas" element={<PageAulas/>}/>
