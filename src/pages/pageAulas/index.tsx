@@ -4,9 +4,10 @@ import './style.css'
 
 import { Titulo, Body, Next, SideBar, QuizPage } from './pageComponents';
 import { FooterComponent, HeaderComponent, MediaPlayer } from '../../components';
+import { useNavigate } from 'react-router';
 
 const PageAulas: React.FC = () => {
-
+    const navigate = useNavigate();
     const [show, setShow] = React.useState(false)
     const [screenOption, setScreenOption] = React.useState(1)
     const pageRef = React.useRef<HTMLDivElement>(null)
@@ -43,7 +44,8 @@ const PageAulas: React.FC = () => {
         <HeaderComponent
             rightIcon={0}
             leftIcon={2}
-            leftCb={()=>setShow(!show)}
+            rightCb={()=>setShow(!show)}
+            leftCb={()=>{navigate("/home")}}
         />
             <section id="menuAula">
                 {screenOption === 1 && (<>

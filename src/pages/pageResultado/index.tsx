@@ -9,10 +9,12 @@ import axios from 'axios'
 
 import { Resultado } from './pageComponents'
 import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router'
 
 
 const ResultadoQuiz: React.FC = () => {
 
+    const navigate = useNavigate();
     // const acertos = useParams().acertos
 
     const updateProfile = () => {
@@ -28,7 +30,9 @@ const ResultadoQuiz: React.FC = () => {
     return (<>
         <HeaderComponent
             rightIcon={0}
-            leftIcon={2}        
+            leftIcon={2}    
+            leftCb={()=>{navigate("/home")}}
+            rightCb={()=>{navigate("/cursos")}}    
         />
         <section id="resultadoQuiz">
             <Titulo subtitulo="Quiz"/>
