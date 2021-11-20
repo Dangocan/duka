@@ -1,7 +1,7 @@
 import React from 'react'
 import {Routes, Route} from "react-router-dom";
 
-import { LandingPage, PageAulas, ProfilePage } from './pages';
+import { LandingPage, PageAulas, PageQuiz, ResultadoQuiz, ProfilePage } from './pages';
 
 const Router = () => {
   
@@ -12,6 +12,8 @@ const Router = () => {
         {/* <Route path="/home" element={</>}/> */}
         {/* <Route path="/cursos" element={</>}/> */}
         <Route path="/aulas" element={<PageAulas/>}/>
+        <Route path="/quiz" element={<PageQuiz/>}/>
+        <Route path="/quiz/resultado/:acertos" element={<ResultadoQuiz/>}/>
 
         {/* <Route path="/dashboard" element={</>}/> */}
    </Routes>

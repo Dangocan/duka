@@ -28,10 +28,11 @@ const  HeaderComponent:React.FC <Props> = ({rightIcon,leftIcon, rightCb, leftCb}
         2 - curso
         3 - voltar
         4 - config
+        5 - undefined
     */
 
 
-    let iconArray = [curso,perfil,home,voltar,config]
+    let iconArray = [curso,perfil,home,voltar,config,undefined]
     
     return (
         <>

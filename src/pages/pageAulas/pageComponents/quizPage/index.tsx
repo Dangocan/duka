@@ -1,7 +1,7 @@
 import * as React from 'react'
+import { Link } from 'react-router-dom';
 import './style.css'
 const QuizPage: React.FC = () => {
-
     return(<>
         <section
             id="quizPage"
@@ -22,10 +22,11 @@ const QuizPage: React.FC = () => {
                 após revisar o conteúdo.
             </h5>
 
-
-            <button>
-                Iniciar Avaliação
-            </button>
+            <div>
+                <Link className="iniciaQuiz" to="/quiz">
+                    Iniciar Avaliação
+                </Link>
+            </div>
         </section>
     </>)
 }

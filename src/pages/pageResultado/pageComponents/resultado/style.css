@@ -1,0 +1,31 @@
+section#cardResultado{
+width: 90%;
+margin: 0 auto 50px auto;
+text-align: center;
+}
+
+section#cardResultado img{
+    width: 40%;
+    max-width: 240px;
+}
+
+section#cardResultado h2{
+    font-size: 1.5em;
+    font-weight: 600;
+    color: #045171;
+    margin: 10px auto 20px auto;
+}
+
+section#cardResultado p{
+    font-size: 1.15em;
+    font-weight: 400;
+    color: #282828;
+    margin: 10px auto 20px auto;
+}
+
+section#cardResultado span{
+    font-size: 1.1em;
+    font-weight: 400;
+    color: #282828;
+    margin: 10px auto 0 auto;
+}

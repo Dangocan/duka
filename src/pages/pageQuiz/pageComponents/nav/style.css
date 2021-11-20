@@ -1,0 +1,35 @@
+section.navDir{
+    text-align: right;
+}
+
+section.navEsq{
+    text-align: left;
+}
+
+section.navDir, section.navEsq{
+    width: 80%;
+    position: absolute;
+    bottom: 5vh;
+    padding-left: 5%;
+    transition: transform .2s;
+    max-width: 768px;
+}
+
+section.navDir:hover{
+    cursor: pointer;
+    transform: translateX(10px)
+}
+section.navEsq:hover{
+    cursor: pointer;
+    transform: translateX(-10px)
+}
+
+section.navDir p, section.navEsq p{
+    border: 3px solid #0C97AA;
+    font-size: 1.15em;
+    font-weight: 500;
+    border-radius: 50px;
+    padding: 10px;
+    display: inline-block;
+
+}
