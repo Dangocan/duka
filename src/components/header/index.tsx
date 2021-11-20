@@ -40,7 +40,7 @@ const  HeaderComponent:React.FC <Props> = ({rightIcon,leftIcon, rightCb, leftCb}
                 <section>
                     <div 
                     className="left-nav"
-                    onClick={rightCb}
+                    onClick={leftCb}
                     >
                         <img className="nav-img" src={iconArray[leftIcon]} alt="" />
                     </div>
@@ -49,7 +49,7 @@ const  HeaderComponent:React.FC <Props> = ({rightIcon,leftIcon, rightCb, leftCb}
                     </div>
                     <div 
                     className="right-nav"
-                    onClick={leftCb}
+                    onClick={rightCb}
                     >
                         <img className="nav-img" src={iconArray[rightIcon]} alt="" />
                     </div>
