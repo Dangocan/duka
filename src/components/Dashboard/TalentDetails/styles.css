@@ -1,0 +1,23 @@
+.talent-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.title-talent-details {
+  font-weight: 500;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.section-who {
+  width: 40%;
+}
+
+.section-how {
+  width: 25%;
+}
+
+.section-accomplishments {
+  width: 35%;
+}
