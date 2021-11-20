@@ -1,7 +1,9 @@
 import React from "react";
 
 import { FooterComponent, HeaderComponent} from '../../components';
+import axios from 'axios'
 
+import ConquistaTutorial from './../../assets/icons/conquista-tutorial.svg'
 
 import './styles.css';
 import profilePicture from '../../assets/profile/Imagem Perfil.svg'
@@ -11,12 +13,35 @@ import { ChartsComponent } from "./pageComponents";
 
 
 const  ProfilePage:React.FC  = () => {
+
+    const [tutorial, setTutorial] = React.useState(false)
+
+    const initDados = () => {
+        axios.get('http://localhost:3333/getTutorial')
+        .then((res)=>setTutorial(res.data))
+        .catch((err)=>console.log(err))
+    }
+    const resetProfile = () => {
+        axios.post('http://localhost:3333/updateTutorial', {
+            status: false,
+        })
+        .then(()=>setTutorial(false))
+        .catch((err)=>console.log(err))
+    }
+
+    React.useEffect(()=>{
+        initDados()
+    })
+
     return (
         <>
            <HeaderComponent
                 leftIcon = {2}
                 rightIcon = {4}
-                rightCb = {() => {}}
+                rightCb = {() => {
+                    if(window.confirm("Deseja resetar esse protótipo ao seu estado original?"))
+                        resetProfile()
+                }}
                 leftCb = {() => {}}
            />
             <div className="main-profile-content">
@@ -34,7 +59,15 @@ const  ProfilePage:React.FC  = () => {
                     <div className="achievments">
                         <h2>Suas conquistas</h2>
                         <div className="achiv-card">
-                            <h4>Quando você conclui um curso, sua insígnea aparece aqui :D</h4>
+                            {!tutorial&&
+                            <h4>
+                                Quando você conclui um curso, sua insígnea aparece aqui :D
+                            </h4>
+                            }
+                            {tutorial&&<>
+                                <img src={ConquistaTutorial} alt="Conquista - Tutorial" />
+                                <p>Completou o Tutorial</p>
+                                </>}
                         </div>
 
                     </div>
@@ -43,7 +76,6 @@ const  ProfilePage:React.FC  = () => {
                         <div className="achiv-card">
                             <h4>Seus cursos concluídos se encontram nessa sessão, conclua um curso para que ele apareça aqui :)</h4>
                         </div>
-
                     </div>
                 </div>
             </div>
