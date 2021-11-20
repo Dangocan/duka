@@ -3,7 +3,7 @@ import * as React from 'react'
 import './style.css'
 
 import { Titulo, Body, Next, Button, SideBar, QuizPage } from './pageComponents';
-import { MediaPlayer } from '../../components';
+import { FooterComponent, HeaderComponent, MediaPlayer } from '../../components';
 
 const PageAulas: React.FC = () => {
 
@@ -34,35 +34,36 @@ const PageAulas: React.FC = () => {
                     screen={(option)=>{
                         setScreenOption(option)
                     }}
+                    onClose={()=>setShow(false)}
                 />
             </div>
             )}
             
         
-        {/* Get Header Here */}
-        
-            <Button callback={()=>{
-                setShow(!show)
-            }}/>
-            
-            {screenOption === 1 && (<>
-                <Titulo
-                subtitulo={"Aula Magna - Conhecendo a Plataforma"}
-                />
-                <MediaPlayer/>
-                <Body/>
-                <Next forward={true} callback={()=>setScreenOption(screenOption+1)}/>
-            </>)}
-            {screenOption === 2 && (<>
-                <Titulo
-                subtitulo={"Quiz"}
-                />
-                <QuizPage/>
-                <Next forward={false} callback={()=>setScreenOption(screenOption-1)}/>
-            </>)}
-            
+        <HeaderComponent
+            rightIcon={0}
+            leftIcon={2}
+            leftCb={()=>setShow(!show)}
+        />
+            <section id="menuAula">
+                {screenOption === 1 && (<>
+                    <Titulo
+                    subtitulo={"Aula Magna - Conhecendo a Plataforma"}
+                    />
+                    <MediaPlayer/>
+                    <Body/>
+                    <Next forward={true} callback={()=>setScreenOption(screenOption+1)}/>
+                </>)}
+                {screenOption === 2 && (<>
+                    <Titulo
+                    subtitulo={"Quiz"}
+                    />
+                    <QuizPage/>
+                    <Next forward={false} callback={()=>setScreenOption(screenOption-1)}/>
+                </>)}
+            </section>
 
-        {/* Get Footer Here */}
+        <FooterComponent/>
         
     </>)
 }

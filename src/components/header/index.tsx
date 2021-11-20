@@ -14,16 +14,18 @@ import config from '../../assets/navOptions/Config.svg'
 interface Props {
     rightIcon: number;
     leftIcon: number;
+    rightCb?: ()=>void
+    leftCb?: ()=>void
 }
 
-const  HeaderComponent:React.FC <Props> = ({rightIcon,leftIcon}) => {
+const  HeaderComponent:React.FC <Props> = ({rightIcon,leftIcon, rightCb, leftCb}) => {
 
     /*
         [ICON LIST]:
 
-        0 - curso
+        0 - home
         1 - perfil
-        2 - home
+        2 - curso
         3 - voltar
         4 - config
     */
@@ -34,15 +36,23 @@ const  HeaderComponent:React.FC <Props> = ({rightIcon,leftIcon}) => {
     return (
         <>
             <div className="header">
-                <div className="left-nav">
-                    <img className="nav-img" src={iconArray[leftIcon]} alt="" />
-                </div>
-                <div className="logo">
-                    <img className="logo-nav-img" src={logo} alt="Logo Duka" />
-                </div>
-                <div className="right-nav">
-                    <img className="nav-img" src={iconArray[rightIcon]} alt="" />
-                </div>
+                <section>
+                    <div 
+                    className="left-nav"
+                    onClick={rightCb}
+                    >
+                        <img className="nav-img" src={iconArray[leftIcon]} alt="" />
+                    </div>
+                    <div className="logo">
+                        <img className="logo-nav-img" src={logo} alt="Logo Duka" />
+                    </div>
+                    <div 
+                    className="right-nav"
+                    onClick={leftCb}
+                    >
+                        <img className="nav-img" src={iconArray[rightIcon]} alt="" />
+                    </div>
+                </section>
             </div>
         </>
     );

@@ -19,10 +19,12 @@ section#titulo h2{
     font-size: 1.45em;
     font-weight: 500;
     margin: 0 auto;
+    color: #282828;
 }
 
 section#titulo h3{
     font-size: 1em;
     font-weight: 400;
     margin: 4px auto 0 auto;
+    color: #282828;
 }

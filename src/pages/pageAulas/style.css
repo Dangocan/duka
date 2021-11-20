@@ -8,3 +8,9 @@ div#pageFilter{
     height: 100%;
     background-color: rgba(0,0,0,0.6);
 }
+
+section#menuAula{
+    max-width: 768px;
+    min-height: calc(100vh - 152px);
+    margin: 0 auto;
+}
