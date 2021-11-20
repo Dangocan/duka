@@ -52,7 +52,7 @@
     margin: 0 0 68px 0;
 }
 
-.login h2,h3{
+.login h2,.login h3{
     font-family: 'Barlow', sans-serif;
     font-weight: 200;
     font-size: 22px;
