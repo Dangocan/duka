@@ -23,7 +23,11 @@ section#quizPage h5{
     margin: 0;
 }
 
-section#quizPage button{
+section#quizPage div{
+    margin-top: 50px;
+}
+
+section#quizPage a.iniciaQuiz{
     background-color: #73F9D9;
     border: 1px solid transparent;
     border-radius: 5px;
@@ -31,9 +35,11 @@ section#quizPage button{
     padding: 15px;
     font-size: 1em;
     font-weight: 500;
-    margin: 50px auto 0 auto;
+    margin: 0 auto;
+    text-decoration: none;
+    color: #282828;
 }
 
-section#quizPage button:hover{
+section#quizPage a.iniciaQuiz:hover{
     cursor: pointer;
 }

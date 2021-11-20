@@ -2,7 +2,7 @@ import * as React from 'react'
 
 import './style.css'
 
-import { Titulo, Body, Next, Button, SideBar, QuizPage } from './pageComponents';
+import { Titulo, Body, Next, SideBar, QuizPage } from './pageComponents';
 import { FooterComponent, HeaderComponent, MediaPlayer } from '../../components';
 
 const PageAulas: React.FC = () => {

@@ -1,0 +1,51 @@
+section.pergunta{
+
+}
+
+section.pergunta h2{
+    color: #0C97AA;
+    font-weight: 600;
+    font-size: 2em;
+    display: inline-block;
+    width: 10%;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+section.pergunta h3{
+    color: #282828;
+    font-weight: 500;
+    font-size: 1.35em;
+    display: inline-block;
+    width: 80%;
+    margin-bottom: 0;
+}
+
+section.pergunta h4{
+    color: #282828;
+    font-weight: 400;
+    font-size: 1.25em;
+    margin: 20px 10%;
+    padding: 10px 0;
+    transition: transform .2s;
+}
+
+section.pergunta h4:hover{
+    cursor: pointer;
+    transform: translateX(10px);
+}
+
+section.pergunta h4 span{
+    font-weight: 600;
+    border: 2px solid #282828;
+    border-radius: 100%;
+    padding: 5px 10px;
+    margin-right: 10px;
+}
+
+section.pergunta h4.clicked{
+ font-weight: 600;
+}
+section.pergunta h4.clicked span{
+    background-color: #18EDE0;
+}
