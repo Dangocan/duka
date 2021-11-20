@@ -1,2 +1,4 @@
 import LandingPage from './landingPage'
-export{ LandingPage }
+import PageAulas from "./pageAulas"
+
+export{ PageAulas, LandingPage }

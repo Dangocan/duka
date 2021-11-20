@@ -4,7 +4,13 @@
     height: 76px;
     background-color: #0C97AA;
 
+    
+}
+
+.header section{
     display: flex;
+    max-width: 768px;
+    margin: 0 auto;
     justify-content: space-evenly;
     align-items: center;
 

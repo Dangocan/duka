@@ -1,0 +1,30 @@
+section#titulo{
+    padding-top: 30px;
+    margin: 0 0 30px 10%;
+}
+
+section#titulo img{
+    width: 40px;
+    height: 40px;
+    padding-bottom: 3px;
+}
+
+section#titulo div{
+    display: inline-block;
+    padding: 5px;
+    color: #282828;
+}
+
+section#titulo h2{
+    font-size: 1.45em;
+    font-weight: 500;
+    margin: 0 auto;
+    color: #282828;
+}
+
+section#titulo h3{
+    font-size: 1em;
+    font-weight: 400;
+    margin: 4px auto 0 auto;
+    color: #282828;
+}

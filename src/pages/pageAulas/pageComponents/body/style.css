@@ -1,0 +1,13 @@
+section#body{
+    width: 80%;
+    margin: 30px auto 0 auto;
+}
+section#body p{
+    margin: 15px 0;
+    font-size: 0.9em;
+    color: #282828;
+}
+
+section#body p span{
+    font-weight: 500;
+}

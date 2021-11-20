@@ -1,4 +1,5 @@
 import HeaderComponent from './header';
 import FooterComponent from './footer'
+import MediaPlayer from "./mediaPlayer";
 
-export {HeaderComponent,FooterComponent}
+export {MediaPlayer, HeaderComponent,FooterComponent }

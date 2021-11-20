@@ -3,11 +3,17 @@
     height: 76px;
     background-color: #045171;
 
+    
+}
+
+.footer div{
+    max-width: 768px;
     display: flex;
     justify-content: flex-end;
 
     box-sizing: border-box;
-    padding-right: 28px;
+    margin: 0 auto;
+    padding-right: 60px;
 }
 
 .footer img{

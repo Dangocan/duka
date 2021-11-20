@@ -11,7 +11,9 @@ const  FooterComponent:React.FC  = () => {
     return (
         <>
             <div className="footer">
-                <img src={logo}  alt="Duka logo" />
+                <div>
+                    <img src={logo}  alt="Duka logo" />
+                </div>
             </div>
         </>
     );
