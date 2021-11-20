@@ -1,0 +1,125 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Sirin+Stencil&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sirin+Stencil&display=swap');
+
+
+
+.main{
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    background: linear-gradient(107.27deg, #055F77 37.04%, rgba(23, 170, 208, 0.62) 92.51%);
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    overflow: hidden;
+
+}
+
+.logo,.login{
+    width: 50%;
+    height: 100%;
+    max-height: 800px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    box-sizing: border-box;
+}
+
+.logo-img{
+    width: 25%;
+}
+
+.art-img{
+    width: 60%;
+}
+
+.logo h1{
+    font-family: 'Sirin Stencil', cursive;
+    font-weight: 400;
+    font-size: 42px;
+    color: #FFFF;
+
+    text-align: center;
+    margin: 0 0 68px 0;
+}
+
+.login h2,h3{
+    font-family: 'Barlow', sans-serif;
+    font-weight: 200;
+    font-size: 22px;
+    color: #FFFF;
+}
+
+.login-button{
+    width: 300px;
+    height: 60px;
+
+    border-radius: 16px;
+    border: none;
+
+    font-family: 'Barlow', sans-serif;
+    color: #FFFF;
+    font-size: 22px;
+
+    background-color: #076E89;
+
+    cursor: pointer;
+}
+
+.login-button:hover{
+    background-color: #055F77;
+}
+
+.login-wrapper{
+    width: 300px;
+    height: 60px;
+
+    width: 50%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@media screen and (max-width:1024px) {
+
+    .main{
+        padding-top: 120px;
+        flex-direction: column;
+        justify-content: unset;
+        box-sizing: border-box;
+    }
+    .logo h1, .logo .art-img{
+        display: none;
+    }
+
+    .logo-img{
+        width: 45%;
+    }
+
+    .logo, .login {
+        width: auto; 
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+    }
+
+    .login-wrapper{
+        width: unset;
+    }
+
+
+}
