@@ -1,5 +1,4 @@
-//import componentDummy from './componentDummy';
-//import componentDummy2 from './componentDummy';
+import HeaderComponent from './header';
+import FooterComponent from './footer'
 
-//export {componentDummy, componentDummy2};
-export {}
+export {HeaderComponent,FooterComponent}
