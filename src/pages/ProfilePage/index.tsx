@@ -9,11 +9,13 @@ import './styles.css';
 import profilePicture from '../../assets/profile/Imagem Perfil.svg'
 
 import { ChartsComponent } from "./pageComponents";
+import { useNavigate } from "react-router";
 
 
 
 const  ProfilePage:React.FC  = () => {
 
+    const navigate = useNavigate();
     const [tutorial, setTutorial] = React.useState(false)
 
     const initDados = () => {
@@ -42,7 +44,7 @@ const  ProfilePage:React.FC  = () => {
                     if(window.confirm("Deseja resetar esse protótipo ao seu estado original?"))
                         resetProfile()
                 }}
-                leftCb = {() => {}}
+                leftCb={()=>{navigate("/home")}}
            />
             <div className="main-profile-content">
                 <div className="welcome-box">

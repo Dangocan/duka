@@ -1,7 +1,7 @@
 import React from 'react'
 import {Routes, Route} from "react-router-dom";
 
-import { LandingPage, PageAulas, PageQuiz, ResultadoQuiz, ProfilePage } from './pages';
+import { LandingPage, PageAulas, PageQuiz, ResultadoQuiz, ProfilePage, TrilhaTutorial } from './pages';
 
 const Router = () => {
   
@@ -11,6 +11,7 @@ const Router = () => {
         <Route path="/perfil" element={<ProfilePage/>}/>
         {/* <Route path="/home" element={</>}/> */}
         {/* <Route path="/cursos" element={</>}/> */}
+        <Route path="/trilha/tutorial" element={<TrilhaTutorial/>}/>
         <Route path="/aulas" element={<PageAulas/>}/>
         <Route path="/quiz" element={<PageQuiz/>}/>
         <Route path="/quiz/resultado/:acertos" element={<ResultadoQuiz/>}/>
