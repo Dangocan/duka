@@ -17,7 +17,7 @@
   --blue: #0C97AA
 }
 
-body {
+#myBody {
   background-color: #FBFBFB;
   display: flex;
   flex-wrap: wrap;

@@ -18,7 +18,7 @@ const ResultadoQuiz: React.FC = () => {
     // const acertos = useParams().acertos
 
     const updateProfile = () => {
-        axios.post('http://localhost:3333/updateTutorial', {
+        axios.post('https://duka-backend-undefined.herokuapp.com/updateTutorial', {
             status: true,
         })
         .catch((err)=>console.log(err))

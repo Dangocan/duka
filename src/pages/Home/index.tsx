@@ -4,12 +4,20 @@ import { ArrowRight } from 'react-feather';
 import './styles.css';
 
 import WelcomeImage from './assets/WelcomeImage.svg'
+import { HeaderComponent } from '../../components';
+import { useNavigate } from "react-router";
 
 const Home: React.FC = () => {
+  let navigate = useNavigate();
   return (
     <>
       <body>
-        <div className="header"></div>
+        <HeaderComponent
+          rightIcon = {1}
+          leftIcon = {0}
+          rightCb={()=>{navigate("/perfil")}}
+          leftCb={()=>{navigate("/cursos")}}
+        />
         
         <div className="card-welcome">
           <div>

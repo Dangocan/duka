@@ -8,13 +8,13 @@ import Cubos from './assets/Cubos.svg';
 import Abstract from './assets/Abstract.svg';
 import LogoDuka from '../../assets/LogoDuka.svg';
 
-import { TalentCard } from '../../components';
+import { FooterComponent, TalentCard } from '../../components';
 import { MyTalentCard } from '../../components';
 
 const Dashboard: React.FC = () => {
   return (
     <>
-      <body>
+      <body id = "myBody">
         <img className="abstract-image" src={Abstract} alt="" />
 
         <div className="sidebar">
@@ -108,7 +108,10 @@ const Dashboard: React.FC = () => {
           </div>
 
           <h2 className="section-title">Acompanhe seus talentos</h2>
-
+          
+          {
+            
+          }
           <MyTalentCard />
           <MyTalentCard />
           <MyTalentCard />
@@ -119,8 +122,9 @@ const Dashboard: React.FC = () => {
             </button>
           </div>
         </div>
+        <FooterComponent/>
       </body>
-      {/* <div className="footer"></div> */}
+      
     </>
   )
 }

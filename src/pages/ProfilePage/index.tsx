@@ -19,12 +19,12 @@ const  ProfilePage:React.FC  = () => {
     const [tutorial, setTutorial] = React.useState(false)
 
     const initDados = () => {
-        axios.get('http://localhost:3333/getTutorial')
+        axios.get('https://duka-backend-undefined.herokuapp.com/getTutorial')
         .then((res)=>setTutorial(res.data))
         .catch((err)=>console.log(err))
     }
     const resetProfile = () => {
-        axios.post('http://localhost:3333/updateTutorial', {
+        axios.post('https://duka-backend-undefined.herokuapp.com/updateTutorial', {
             status: false,
         })
         .then(()=>setTutorial(false))
