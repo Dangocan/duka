@@ -1,0 +1,14 @@
+.mediaPlayer-container{
+    width: 80vw;
+    height: 60vw;
+    max-width: 600px;
+    max-height: 450px;
+    margin: 25px auto;
+}
+.mediaPlayer{
+    width: 100%;
+    height: 100%;
+    border: 4px solid #0c98aa80;
+    border-radius: 4px;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.6);
+}
