@@ -6,6 +6,7 @@ import ResultadoQuiz from './pageResultado';
 import TrilhaTutorial from './trilhaTutorial';
 import Dashboard from './Dashboard';
 import Home from './Home';
+import PageCursos from './pageCursos';
 
 export { 
   PageAulas, 
@@ -15,5 +16,6 @@ export {
   ProfilePage, 
   TrilhaTutorial,
   Dashboard,
-  Home
+  Home,
+  PageCursos
 }
