@@ -9,7 +9,8 @@ import {
   ProfilePage, 
   TrilhaTutorial, 
   Dashboard, 
-  Home
+  Home,
+  PageCursos,
 } from './pages';
 
 const Router = () => {
@@ -19,7 +20,7 @@ const Router = () => {
         <Route path="/" element={<LandingPage/>}/>
         <Route path="/perfil" element={<ProfilePage/>}/>
         <Route path="/home" element={<Home/>}/> 
-        {/* <Route path="/cursos" element={</>}/> */}
+        <Route path="/cursos" element={<PageCursos/>}/>
         <Route path="/trilha/tutorial" element={<TrilhaTutorial/>}/>
         <Route path="/aulas" element={<PageAulas/>}/>
         <Route path="/quiz" element={<PageQuiz/>}/>
