@@ -223,23 +223,6 @@ const Dashboard: React.FC = () => {
             />
             : <></>
             }
-            { followTalent.includes('Thiago')?
-              
-              <MyTalentCard 
-                name = "Thiago"
-                completeName = {"Thiago Waib Castello Branco"}
-                city = {"19 anos, Marília - SP"}
-                talent = {"Futro talento em FullStack"}
-                unfollow={()=>{
-                  nameArr && setNameArr([...nameArr, {name:"Thiago", link: "https://avatars.githubusercontent.com/u/61032370?v=4"}])
-                  setFollowTalent(followTalent.filter(talento => talento!=="Thiago"))
-                  updateFollows("pop","Thiago")
-                }}
-                profile = {"https://avatars.githubusercontent.com/u/61032370?v=4"}
-              />
-              
-              : <></>
-            }
 
             {
               followTalent.length>1 ? 
