@@ -233,11 +233,6 @@ select {
   cursor: pointer;
 }
 
-.footer {
-  background: #045171;
-  height: 100px;
-}
-
 .adjust-button {
   width: 100%;
   justify-content: center;

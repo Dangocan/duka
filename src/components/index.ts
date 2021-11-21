@@ -11,5 +11,5 @@ export {
     FooterComponent,
     MyTalentCard,
     TalentCard,
-    TalentDetails,
+    TalentDetails
 }

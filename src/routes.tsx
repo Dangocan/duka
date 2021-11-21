@@ -1,7 +1,16 @@
 import React from 'react'
 import {Routes, Route} from "react-router-dom";
 
-import { LandingPage, PageAulas, PageQuiz, ResultadoQuiz, ProfilePage, TrilhaTutorial, Dashboard, Home } from './pages';
+import { 
+  LandingPage, 
+  PageAulas, 
+  PageQuiz, 
+  ResultadoQuiz, 
+  ProfilePage, 
+  TrilhaTutorial, 
+  Dashboard, 
+  Home
+} from './pages';
 
 const Router = () => {
   
