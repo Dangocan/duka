@@ -169,7 +169,7 @@ const Dashboard: React.FC = () => {
               name = "Raquel"
               completeName = {"Raquel de Oliveira dos Santos"}
               city = {"19 anos, São Paulo - SP"}
-              talent = {"Futro talento em Front-end"}
+              talent = {"Futuro talento em Front-end"}
               unfollow={()=>{
                 nameArr && setNameArr([...nameArr, {name:"Raquel", link: "https://media.istockphoto.com/photos/learn-to-love-yourself-first-picture-id1291208214?k=20&m=1291208214&s=612x612&w=0&h=WbHbwklzP81iAWV0dPlQWuBLxnbqJFk81a9OZG6qvSM="}])
                 setFollowTalent(followTalent.filter(talento => talento!=="Raquel"))
@@ -183,7 +183,7 @@ const Dashboard: React.FC = () => {
               name = "Calebe"
               completeName = {"Calebe Fernandes de Oliveira"}
               city = {"19 anos, Americana - SP"}
-              talent = {"Futro talento em Front-end"}
+              talent = {"Futuro talento em Front-end"}
               unfollow={()=>{
                 nameArr && setNameArr([...nameArr, {name:"Calebe", link: "https://avatars.githubusercontent.com/u/66683288?v=4"}])
                 setFollowTalent(followTalent.filter(talento => talento!=="Calebe"))
@@ -198,7 +198,7 @@ const Dashboard: React.FC = () => {
               name = "Luanda"
               completeName = {"Luanda Shibata de Jesus Vital"}
               city = {"19 anos, Mogi das Cruzes - SP"}
-              talent = {"Futro talento em UX/UI"}
+              talent = {"Futuro talento em UX/UI"}
               unfollow={()=>{
                 nameArr && setNameArr([...nameArr, {name:"Luanda", link: "https://avatars.githubusercontent.com/u/66751357?v=4"}])
                 setFollowTalent(followTalent.filter(talento => talento!=="Luanda"))
@@ -214,7 +214,7 @@ const Dashboard: React.FC = () => {
               name = "Thiago"
               completeName = {"Thiago Waib Castello Branco"}
               city = {"19 anos, Marília - SP"}
-              talent = {"Futro talento em FullStack"}
+              talent = {"Futuro talento em FullStack"}
               unfollow={()=>{
                 nameArr && setNameArr([...nameArr, {name:"Thiago", link: "https://avatars.githubusercontent.com/u/61032370?v=4"}])
                 setFollowTalent(followTalent.filter(talento => talento!=="Thiago"))
