@@ -14,10 +14,10 @@ interface Props{
   city:string
   description?:string,
   profile:string
-
+  unfollow?:()=>void
 }
 
-const MyTalentCard: React.FC<Props> = ({name,completeName,talent,description,profile,city}) => {
+const MyTalentCard: React.FC<Props> = ({name,completeName,talent,description,profile,city,unfollow}) => {
 
   const [isOpen, setIsOpen] = useState(false);
 
@@ -48,7 +48,7 @@ const MyTalentCard: React.FC<Props> = ({name,completeName,talent,description,pro
               <User color="#FFFFFF" size={18} />
             </div>
 
-            <div className="button-icon">
+            <div className="button-icon" onClick={unfollow}>
               <Heart color="#FFFFFF" size={18} fill="#FFFFFF"/>
             </div>
           </div>
