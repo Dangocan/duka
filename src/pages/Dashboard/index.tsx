@@ -156,54 +156,70 @@ const Dashboard: React.FC = () => {
               </div>
             </div>
 
-            <h2 className="section-title">Acompanhe seus talentos</h2>
-            {
-              followTalent.length===1 && followTalent[0]===""? 
-              <h2 className = "do-a-search">Favorite um Talento para acompanhar seu crescimento bem de perto S2</h2>
-              :<></>
-            }
+          <h2 className="section-title">Acompanhe seus talentos</h2>
+          {
+            followTalent.length===1 && followTalent[0]===""? 
+            <h2 className = "do-a-search">Favorite um Talento para acompanhar seu crescimento bem de perto S2</h2>
+            :<></>
+          }
 
-            { followTalent.includes('Raquel') ?
-                <MyTalentCard
-                name = "Raquel"
-                completeName = {"Raquel de Oliveira dos Santos"}
-                city = {"19 anos, São Paulo - SP"}
-                talent = {"Futro talento em Front-end"}
-                unfollow={()=>{
-                  nameArr && setNameArr([...nameArr, {name:"Raquel", link: "https://media.istockphoto.com/photos/learn-to-love-yourself-first-picture-id1291208214?k=20&m=1291208214&s=612x612&w=0&h=WbHbwklzP81iAWV0dPlQWuBLxnbqJFk81a9OZG6qvSM="}])
-                  setFollowTalent(followTalent.filter(talento => talento!=="Raquel"))
-                  updateFollows("pop","Raquel")
-                }}
-                profile = {"https://media.istockphoto.com/photos/learn-to-love-yourself-first-picture-id1291208214?k=20&m=1291208214&s=612x612&w=0&h=WbHbwklzP81iAWV0dPlQWuBLxnbqJFk81a9OZG6qvSM="}
-              /> : <></>
-            }
-            { followTalent.includes('Calebe')?
+          { followTalent.includes('Raquel') ?
+              <MyTalentCard
+              name = "Raquel"
+              completeName = {"Raquel de Oliveira dos Santos"}
+              city = {"19 anos, São Paulo - SP"}
+              talent = {"Futuro talento em Front-end"}
+              unfollow={()=>{
+                nameArr && setNameArr([...nameArr, {name:"Raquel", link: "https://media.istockphoto.com/photos/learn-to-love-yourself-first-picture-id1291208214?k=20&m=1291208214&s=612x612&w=0&h=WbHbwklzP81iAWV0dPlQWuBLxnbqJFk81a9OZG6qvSM="}])
+                setFollowTalent(followTalent.filter(talento => talento!=="Raquel"))
+                updateFollows("pop","Raquel")
+              }}
+              profile = {"https://media.istockphoto.com/photos/learn-to-love-yourself-first-picture-id1291208214?k=20&m=1291208214&s=612x612&w=0&h=WbHbwklzP81iAWV0dPlQWuBLxnbqJFk81a9OZG6qvSM="}
+            /> : <></>
+          }
+           { followTalent.includes('Calebe')?
+            <MyTalentCard 
+              name = "Calebe"
+              completeName = {"Calebe Fernandes de Oliveira"}
+              city = {"19 anos, Americana - SP"}
+              talent = {"Futuro talento em Front-end"}
+              unfollow={()=>{
+                nameArr && setNameArr([...nameArr, {name:"Calebe", link: "https://avatars.githubusercontent.com/u/66683288?v=4"}])
+                setFollowTalent(followTalent.filter(talento => talento!=="Calebe"))
+                updateFollows("pop","Calebe")
+              }}
+              profile = {'https://avatars.githubusercontent.com/u/66683288?v=4'}
+            />
+               : <></>
+          }
+           { followTalent.includes('Luanda')?
               <MyTalentCard 
-                name = "Calebe"
-                completeName = {"Calebe Fernandes de Oliveira"}
-                city = {"19 anos, Americana - SP"}
-                talent = {"Futro talento em Front-end"}
-                unfollow={()=>{
-                  nameArr && setNameArr([...nameArr, {name:"Calebe", link: "https://avatars.githubusercontent.com/u/66683288?v=4"}])
-                  setFollowTalent(followTalent.filter(talento => talento!=="Calebe"))
-                  updateFollows("pop","Calebe")
-                }}
-                profile = {'https://avatars.githubusercontent.com/u/66683288?v=4'}
-              />
-                : <></>
-            }
-            { followTalent.includes('Luanda')?
-                <MyTalentCard 
-                name = "Luanda"
-                completeName = {"Luanda Shibata de Jesus Vital"}
-                city = {"19 anos, Mogi das Cruzes - SP"}
-                talent = {"Futro talento em UX/UI"}
-                unfollow={()=>{
-                  nameArr && setNameArr([...nameArr, {name:"Luanda", link: "https://avatars.githubusercontent.com/u/66751357?v=4"}])
-                  setFollowTalent(followTalent.filter(talento => talento!=="Luanda"))
-                  updateFollows("pop","Luanda")
-                }}
-                profile = {'https://avatars.githubusercontent.com/u/66751357?v=4'}
+              name = "Luanda"
+              completeName = {"Luanda Shibata de Jesus Vital"}
+              city = {"19 anos, Mogi das Cruzes - SP"}
+              talent = {"Futuro talento em UX/UI"}
+              unfollow={()=>{
+                nameArr && setNameArr([...nameArr, {name:"Luanda", link: "https://avatars.githubusercontent.com/u/66751357?v=4"}])
+                setFollowTalent(followTalent.filter(talento => talento!=="Luanda"))
+                updateFollows("pop","Luanda")
+              }}
+              profile = {'https://avatars.githubusercontent.com/u/66751357?v=4'}
+          />
+           : <></>
+          }
+          { followTalent.includes('Thiago')?
+            
+            <MyTalentCard 
+              name = "Thiago"
+              completeName = {"Thiago Waib Castello Branco"}
+              city = {"19 anos, Marília - SP"}
+              talent = {"Futuro talento em FullStack"}
+              unfollow={()=>{
+                nameArr && setNameArr([...nameArr, {name:"Thiago", link: "https://avatars.githubusercontent.com/u/61032370?v=4"}])
+                setFollowTalent(followTalent.filter(talento => talento!=="Thiago"))
+                updateFollows("pop","Thiago")
+              }}
+              profile = {"https://avatars.githubusercontent.com/u/61032370?v=4"}
             />
             : <></>
             }

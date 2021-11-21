@@ -44,6 +44,7 @@
   padding-right: 30px;
   align-items: center;
   max-width: 1000px;
+  height: 93%;
 }
 
 .center-wrapper-company {
@@ -257,6 +258,10 @@ select {
 
 
 @media screen and (max-width:980px) {
+  .container {
+    height: unset;
+  }
+  
   .sidebar {
     display: none;
   }

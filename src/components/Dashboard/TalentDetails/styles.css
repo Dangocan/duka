@@ -1,7 +1,8 @@
 .talent-details {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-evenly;
+  padding: 8px;
 }
 
 .title-talent-details {
@@ -10,14 +11,6 @@
   margin-bottom: 8px;
 }
 
-.section-who {
-  width: 40%;
-}
-
-.section-how {
-  width: 25%;
-}
-
-.section-accomplishments {
-  width: 35%;
+.section-who,.section-how,.section-accomplishments{
+  margin: 12px 0;
 }
