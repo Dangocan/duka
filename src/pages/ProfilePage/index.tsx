@@ -85,7 +85,7 @@ const  ProfilePage:React.FC  = () => {
            
 
 
-           <FooterComponent/>
+           {/* <FooterComponent/> */}
         </>
     );
 };

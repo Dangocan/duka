@@ -45,8 +45,6 @@ const ResultadoQuiz: React.FC = () => {
                 </Link>
             </div>
         </section>
-        
-        <FooterComponent/>
 
     </>)
 }

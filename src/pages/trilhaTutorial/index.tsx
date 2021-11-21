@@ -38,7 +38,7 @@ const TrilhaTutorial: React.FC = (props:any) => {
 
         </section>
 
-        <FooterComponent/>
+        {/* <FooterComponent/> */}
     
     </>)
 }

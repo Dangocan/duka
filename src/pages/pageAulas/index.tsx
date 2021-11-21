@@ -65,7 +65,7 @@ const PageAulas: React.FC = () => {
                 </>)}
             </section>
 
-        <FooterComponent/>
+        {/* <FooterComponent/> */}
         
     </>)
 }

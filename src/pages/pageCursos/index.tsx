@@ -108,7 +108,7 @@ const PageCursos: React.FC = () => {
             </div>
         
     </section>
-    <FooterComponent/>
+    {/* <FooterComponent/> */}
 
     </>)
 }
