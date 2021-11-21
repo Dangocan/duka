@@ -10,7 +10,7 @@ const MediaPlayer: React.FC = () => {
             className="mediaPlayer"
             width="274px" 
             height="220px" 
-            src="https://www.youtube.com/embed/cIosb69x9iI" 
+            src="https://www.youtube.com/embed/q8MwQF5mOwU" 
             title="Media Player" 
             frameBorder="0" 
             allow="
