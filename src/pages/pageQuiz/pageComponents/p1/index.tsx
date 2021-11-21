@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { FooterComponent } from '../../../../components';
 import './style.css'
 
 
@@ -43,35 +44,35 @@ const Perg1:React.FC <Props> = ({cb, selected}) => {
   return (<>
     <section className="pergunta">  
         <h2>1.</h2>
-        <h3>Lorem ipsum solem bolem cotrem dorem mirem caste diem pite dinte</h3>
+        <h3>Quantos cursos você pode fazer de forma gratuita na plataforma Duka?</h3>
         <h4
         ref={aRef}
         onClick={()=>{
             cb(1)
             handleClick("A")
         }}
-        ><span>A</span>Lorem Ipsum</h4>
+        ><span>A</span>Todos! Nosso propósito é democratizar o acesso à edcuação digital.</h4>
         <h4
         ref={bRef}
         onClick={()=>{
             cb(2)
             handleClick("B")
         }}
-        ><span>B</span>Lorem Ipsum</h4>
+        ><span>B</span>Nenhum</h4>
         <h4
         ref={cRef}
         onClick={()=>{
             cb(3)
             handleClick("C")
         }}
-        ><span>C</span>Lorem Ipsum</h4>
+        ><span>C</span>Poucos</h4>
         <h4
         ref={dRef}
         onClick={()=>{
             cb(4)
             handleClick("D")
         }}
-        ><span>D</span>Lorem Ipsum</h4>
+        ><span>D</span>Somente 1</h4>
     </section>  
     </>);
 };

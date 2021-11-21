@@ -244,6 +244,20 @@ select {
   display: flex;
 }
 
+.do-a-search{
+  font-size: 18px;
+  text-align: center;
+  font-weight: 400;
+  margin-top: 36px;
+  margin-bottom: 36px;
+}
+
+.results-wrapper{
+  box-sizing: border-box;
+  padding: 12px;
+}
+
+
 
 @media screen and (max-width:980px) {
   .sidebar {

@@ -4,20 +4,27 @@ import { Heart, Mail, User } from 'react-feather';
 import './styles.css';
 
 import Raquel from './../assets/Raquel.png';
+import Placeholder from './../assets/placeholderPerfil.png';
 
-class TalentCard extends Component {
-  render() {
+interface Props{
+  name:string,
+  perfil:string,
+  CB:()=>void,
+  style?:any
+}
+
+var TalentCard:React.FC<Props> = ({name,perfil,CB,style}) => {
     return (
       <>
-        <div className="talent-card">
+        <div className="talent-card" style = {{...style}}>
           <div className="content-card-about">
             <div className="left-wrapper-about">
-              <img className="talent-image" src={Raquel} alt="" />
+              <img className="talent-image" src={perfil} alt="" />
 
               <div className="text-wrapper-about">
-                <p className="title-about">Conheça a Raquel!</p>
+                <p className="title-about">{name}</p>
                 <p className="text-about">
-                  Raquel vem se esforçando muito e já completou nosso módulo avançado em programação!!!
+                  {name} vem se esforçando muito e já completou nosso módulo avançado em programação!!!
                 </p>
               </div>
             </div>
@@ -43,7 +50,7 @@ class TalentCard extends Component {
                   </p>
                 </div>
 
-                <div className="button-about">
+                <button onClick = {CB} className="button-about">
                   <div className="button-icon-about">
                     <Heart color="#000000" size={16} />
                   </div>
@@ -51,7 +58,7 @@ class TalentCard extends Component {
                     Acompanhar
                     <br /> talento
                   </p>
-                </div>
+                </button>
               </div>
             </div>
           </div>
@@ -59,7 +66,6 @@ class TalentCard extends Component {
         </div>
       </>
     );
-  }
 }
 
 export default TalentCard;

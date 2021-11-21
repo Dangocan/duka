@@ -30,6 +30,7 @@
 
 .user-image {
   height: 50px;
+  width: 50px;
   border-radius: 100px;
   border: #73F9D9 solid 4px;
   margin-right: 14px;

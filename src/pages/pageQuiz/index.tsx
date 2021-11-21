@@ -1,7 +1,7 @@
 import * as React from 'react'
 import './style.css'
 
-import { HeaderComponent } from '../../components'
+import { FooterComponent, HeaderComponent } from '../../components'
 import { Enviar, Nav, Perg1, Perg2 } from './pageComponents'
 
 const PageQuiz:React.FC = () => {
