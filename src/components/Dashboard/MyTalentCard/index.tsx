@@ -7,7 +7,17 @@ import Raquel from './../assets/Raquel.png';
 
 import { TalentDetails } from '../../../components';
 
-const MyTalentCard: React.FC = () => {
+interface Props{
+  name:string
+  completeName: string,
+  talent: string,
+  city:string
+  description?:string,
+  profile:string
+
+}
+
+const MyTalentCard: React.FC<Props> = ({name,completeName,talent,description,profile,city}) => {
 
   const [isOpen, setIsOpen] = useState(false);
 
@@ -15,15 +25,15 @@ const MyTalentCard: React.FC = () => {
     <>
       <div className="my-talent-card">
         <div className="left-wrapper">
-          <img className="user-image" src={Raquel} alt="" />
+          <img className="user-image" src={profile} alt="" />
 
           <div className="text-wrapper">
-            <p className="title">Raquel de Oliveira dos Santos</p>
+            <p className="title">{completeName}</p>
             <p className="text-area">
-              Futuro talento em Front-end
+              {talent}
             </p>
             <p className="text-age">
-              19 anos, São Paulo - SP
+              {city}
             </p>
           </div>
         </div>
@@ -46,12 +56,12 @@ const MyTalentCard: React.FC = () => {
           <button className="button-see-more" onClick={() => setIsOpen(!isOpen)}>
             { isOpen ? 
               <>
-                <p className="button-text">Veja menos sobre Raquel</p>
+                <p className="button-text">Veja menos sobre {name}</p>
                 <ChevronUp color="#FFFFFF" size={18} /> 
               </>
               :
               <>
-                <p className="button-text">Veja mais sobre Raquel</p>
+                <p className="button-text">Veja mais sobre {name}</p>
                 <ChevronDown color="#FFFFFF" size={18} /> 
               </>
             }

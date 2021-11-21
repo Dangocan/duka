@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { FooterComponent } from '../../../../components';
 import './style.css'
 
 interface Props{
@@ -42,36 +43,36 @@ const Perg2:React.FC <Props> = ({cb, selected}) => {
   return (<>
     <section className="pergunta">  
         <h2>2.</h2>
-        <h3>Lorem ipsum solem bolem cotrem dorem mirem caste diem pite dinte</h3>
+        <h3>Qual a cor principal da nossa platforma?</h3>
         <h4
         ref={aRef}
         onClick={()=>{
             cb(1)
             handleClick("A")
         }}
-        ><span>A</span>Lorem Ipsum</h4>
+        ><span>A</span>Rosa</h4>
         <h4
         ref={bRef}
         onClick={()=>{
             cb(2)
             handleClick("B")
         }}
-        ><span>B</span>Lorem Ipsum</h4>
+        ><span>B</span>Roxo</h4>
         <h4
         ref={cRef}
         onClick={()=>{
             cb(3)
             handleClick("C")
         }}
-        ><span>C</span>Lorem Ipsum</h4>
+        ><span>C</span>Lilás</h4>
         <h4
         ref={dRef}
         onClick={()=>{
             cb(4)
             handleClick("D")
         }}
-        ><span>D</span>Lorem Ipsum</h4>
-    </section>  
+        ><span>D</span>Azul</h4>
+    </section> 
     </>);
 };
 
