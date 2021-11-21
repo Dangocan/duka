@@ -69,7 +69,7 @@ const MyTalentCard: React.FC<Props> = ({name,completeName,talent,description,pro
         </div>
       </div>
 
-      { isOpen ? <TalentDetails/> : <></>}
+      { isOpen ? <TalentDetails name = {name} completeName = {completeName}/> : <></>}
 
     </>
   );
