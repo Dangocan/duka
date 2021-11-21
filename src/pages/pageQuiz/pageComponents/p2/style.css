@@ -28,6 +28,7 @@ section.pergunta h4{
     margin: 20px 10%;
     padding: 10px 0;
     transition: transform .2s;
+    line-height: 1.6em;
 }
 
 section.pergunta h4:hover{

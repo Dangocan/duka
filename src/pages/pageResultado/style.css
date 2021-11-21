@@ -2,6 +2,7 @@ section#resultadoQuiz{
     max-width: 768px;
     min-height: calc(100vh - 152px);
     margin: 0 auto;
+    padding-top: 20px;
 }
 
 section#resultadoQuiz span{

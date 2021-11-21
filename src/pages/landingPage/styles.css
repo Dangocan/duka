@@ -55,8 +55,13 @@
 .login h2,.login h3{
     font-family: 'Barlow', sans-serif;
     font-weight: 400;
-    font-size: 28px;
+    font-size: 20px;
     color: #FFFF;
+    margin-bottom: 12px;
+}
+
+.login-margin-top {
+    margin-top: 16px;
 }
 
 .login-button{

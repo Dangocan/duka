@@ -1,35 +1,47 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from "react-router";
 import { ArrowRight } from 'react-feather';
+import axios from 'axios';
 
 import './styles.css';
 
 import WelcomeImage from './assets/WelcomeImage.svg';
 import LogoDuka from '../../assets/LogoDuka.svg';
 
-import { 
+import {
   HeaderComponent,
   FooterComponent
 } from '../../components';
 
 const Home: React.FC = () => {
   let navigate = useNavigate();
+
+  const initDados = () => {
+    axios.get('https://duka-backend-undefined.herokuapp.com/getTutorial')
+      .then((res) => setTutorial(res.data))
+      .catch((err) => console.log(err))
+  }
+
+  useEffect(() => { initDados() }, [])
+
+  const [tutorial, setTutorial] = React.useState(false)
+
   return (
     <>
       <body>
         <HeaderComponent
-          rightIcon = {1}
-          leftIcon = {0}
-          rightCb={()=>{navigate("/perfil")}}
-          leftCb={()=>{navigate("/cursos")}}
+          rightIcon={1}
+          leftIcon={0}
+          rightCb={() => { navigate("/perfil") }}
+          leftCb={() => { navigate("/cursos") }}
         />
-        
+
         <div id="body-content-center">
           <div className="body-max-width">
             <div className="card-welcome">
               <div>
                 <p className="title-welcome">
-                  Boa noite Raquel!
+                  Boa tarde Raquel!
                 </p>
                 <p className="text-welcome">
                   Seja bem vinda de volta para mais um dia de estudos :)
@@ -42,30 +54,45 @@ const Home: React.FC = () => {
 
             <p className="text-continue">Continue de onde parou</p>
 
-            <div className="card-last-course">
-              <div className="last-course-image-wrapper">
-                <img className="last-course-image" src={LogoDuka} alt="" />
-              </div>
-              <div className="top-last-course">
-                <p className="title-top-last-course">Tutorial Duka </p>
-                <p className="circle-top-last-course">●</p>
-                <p className="text-top-last-course">Trilha Duka</p>
-              </div>
-              <div className="bottom-last-course">
-                <p className="small-text-bottom-last-course">60% concluído</p>
-                <p className="text-bottom-last-course">
-                  Aprenda como que a nossa plataforma funciona e desenvolva todo o seu potencial com a gente!
-                </p>
-                <div className="button-wrapper-last-course">
-                  <a href="/trilha/tutorial" className="a-underline">
-                    <button className="button-last-course">
-                      <p className="text-button-last-course">Continuar curso</p>
-                      <ArrowRight color="#17C1D9" size={16}/>
-                    </button>
-                  </a>
+            {tutorial ?
+              <>
+                <div className="card-course-not-found">
+                  <p className="title-course-not-found">
+                    Você não está cadastrado em nenhum curso no momento :(
+                  </p>
+                  <p className="medium-course-not-found">
+                    Que tal explorar alguns?
+                  </p>
                 </div>
-              </div>
-            </div>
+              </>
+              :
+              <>
+                <div className="card-last-course">
+                  <div className="last-course-image-wrapper">
+                    <img className="last-course-image" src={LogoDuka} alt="" />
+                  </div>
+                  <div className="top-last-course">
+                    <p className="title-top-last-course">Tutorial Duka </p>
+                    <p className="circle-top-last-course">●</p>
+                    <p className="text-top-last-course">Trilha Duka</p>
+                  </div>
+                  <div className="bottom-last-course">
+                    <p className="small-text-bottom-last-course">0% concluído</p>
+                    <p className="text-bottom-last-course">
+                      Aprenda como que a nossa plataforma funciona e desenvolva todo o seu potencial com a gente!
+                    </p>
+                    <div className="button-wrapper-last-course">
+                      <a href="/trilha/tutorial" className="a-underline">
+                        <button className="button-last-course">
+                          <p className="text-button-last-course">Iniciar curso</p>
+                          <ArrowRight color="#17C1D9" size={16} />
+                        </button>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </>
+            }
 
             <p className="title-section-home">
               Cursos que podem ser de seu interesse:
@@ -74,46 +101,46 @@ const Home: React.FC = () => {
             <div className="section-courses">
               <div className="section-flex-course">
                 <div className="card-courses">
-                  <img 
-                    className="course-image" 
-                    src="https://img.ibxk.com.br/2018/6/programas/12686714154729572.png" 
-                    alt="" 
+                  <img
+                    className="course-image"
+                    src="https://img.ibxk.com.br/2018/6/programas/12686714154729572.png"
+                    alt=""
                   />
                   <p className="text-section-course">
-                    Excel<br/> Básico
+                    Excel<br /> Básico
                   </p>
                 </div>
 
                 <div className="card-courses">
-                  <img 
-                    className="course-image" 
-                    src="https://lsxconsulting.com/wp-content/uploads/2020/07/160.jpg" 
-                    alt="" 
+                  <img
+                    className="course-image"
+                    src="https://lsxconsulting.com/wp-content/uploads/2020/07/160.jpg"
+                    alt=""
                   />
                   <p className="text-section-course">
-                    Power BI<br/> Básico
+                    Power BI<br /> Básico
                   </p>
                 </div>
 
                 <div className="card-courses third-course-card">
-                  <img 
-                    className="course-image" 
-                    src="https://image.freepik.com/vetores-gratis/conceito-de-design-web-para-a-pagina-de-destino_23-2147777956.jpg" 
-                    alt="" 
+                  <img
+                    className="course-image"
+                    src="https://image.freepik.com/vetores-gratis/conceito-de-design-web-para-a-pagina-de-destino_23-2147777956.jpg"
+                    alt=""
                   />
                   <p className="text-section-course">
-                    Web<br/> Design I
+                    Web<br /> Design I
                   </p>
                 </div>
 
                 <div className="card-courses fourth-course-card">
-                  <img 
-                    className="course-image" 
+                  <img
+                    className="course-image"
                     src="https://img.ibxk.com.br/2018/9/programas/12686305181004753.png"
-                    alt="" 
+                    alt=""
                   />
                   <p className="text-section-course">
-                    Word<br/> Básico
+                    Word<br /> Básico
                   </p>
                 </div>
               </div>
@@ -130,10 +157,10 @@ const Home: React.FC = () => {
 
             <div className="section-flex-trail">
               <div className="card-trail">
-                <img 
-                  className="trail-image" 
-                  src="https://img.ibxk.com.br/2018/6/programas/12686714154729572.png" 
-                  alt="" 
+                <img
+                  className="trail-image"
+                  src="https://img.ibxk.com.br/2018/6/programas/12686714154729572.png"
+                  alt=""
                 />
                 <p className="text-section">
                   Excel
@@ -142,10 +169,10 @@ const Home: React.FC = () => {
               </div>
 
               <div className="card-trail">
-                <img 
-                  className="trail-image" 
+                <img
+                  className="trail-image"
                   src="https://lsxconsulting.com/wp-content/uploads/2020/07/160.jpg"
-                  alt="" 
+                  alt=""
                 />
                 <p className="text-section">
                   Power BI
@@ -154,10 +181,10 @@ const Home: React.FC = () => {
               </div>
 
               <div className="card-trail third-trail-card">
-                <img 
-                  className="trail-image" 
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/480px-Unofficial_JavaScript_logo_2.svg.png" 
-                  alt="" 
+                <img
+                  className="trail-image"
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/480px-Unofficial_JavaScript_logo_2.svg.png"
+                  alt=""
                 />
                 <p className="text-section">
                   JavaScript
@@ -167,7 +194,7 @@ const Home: React.FC = () => {
             </div>
           </div>
         </div>
-        <FooterComponent/>
+        <FooterComponent />
       </body>
     </>
   )

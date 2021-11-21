@@ -143,7 +143,7 @@ input, label {
 label {
   color: white;
   margin-bottom: 6px;
-  font-size: 12px;
+  font-size: 13px;
 }
 
 input{
@@ -154,6 +154,7 @@ input{
   color: #797979;
   width: 170px;
   outline: none;
+  font-size: 14px;
 }
 
 select {
@@ -162,6 +163,7 @@ select {
   border: 0;
   padding: 0px 6px;
   color: #797979;
+  font-size: 14px;
 }
 
 .search-bar {
@@ -190,7 +192,7 @@ select {
 }
 
 .filter-icon-first {
-  margin-right: 8px;
+  margin-right: 2px;
 }
 
 .pagination {

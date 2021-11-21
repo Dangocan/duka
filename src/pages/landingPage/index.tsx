@@ -19,7 +19,7 @@ const  LandingPage:React.FC = () => {
                     <div className="login-wrapper">
                         <h3>Você é:</h3>
                         <a href="/home"><button className="login-button">Estudante</button></a>
-                        <h3>ou</h3>
+                        <h3 className="login-margin-top">ou</h3>
                         <a href="/dashboard"><button className="login-button">Empresa</button></a>
                     </div>
                 </div>
