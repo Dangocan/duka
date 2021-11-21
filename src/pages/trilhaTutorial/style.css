@@ -3,16 +3,17 @@ section.trilha{
     max-width: 768px;
     margin: 0 auto;
     min-height: calc(100vh - 152px - 50px);
+    padding-top: 76px;
+    padding-bottom: 20px;
 }
 
 .trilha-container {
     width: calc(80vw - 20px);
     max-width: 600px;
-    height: calc(100vh - 152px - 150px);
     background-color: #0C97AA40;
     border-radius: 25px;
     margin: 50px auto;
-    padding: 20px;
+    padding: 60px 40px;
     box-shadow: 0 1px 4px rgba(0,0,0,0.2);
 }
 
@@ -37,23 +38,25 @@ section.trilha{
     border-radius: 15px;
     display: block;
     margin: 0 auto;
+    align-items: center;
+    justify-content: center;
     
-    font-size: 2em;
+    font-size: 1.3em;
     text-decoration: none;
     color: #282828;
     font-weight: 500;
-    padding: 15px 15px 0 15px;
+    padding: 15px;
     box-shadow: 0 1px 4px rgba(0,0,0,0.4);
 }
 
 .link-container:hover{
-    background-color: #0C97AA;
+    background-color: rgba(12, 151, 170, 0.8);
     color: #fbfbfb;
 }
 
 .link-container img{
-    width: 20%;
-    margin: 0 10px 0 0;
-    padding-bottom: 15px;
+    width: 70px;
+    height: 70px;
+    margin-right: 16px;
     vertical-align: middle;
 }

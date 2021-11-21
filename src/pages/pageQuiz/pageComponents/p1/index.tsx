@@ -51,7 +51,7 @@ const Perg1:React.FC <Props> = ({cb, selected}) => {
             cb(1)
             handleClick("A")
         }}
-        ><span>A</span>Todos! Nosso propósito é democratizar o acesso à edcuação digital.</h4>
+        ><span>A</span>Todos! Nosso propósito é democratizar o acesso à educação digital.</h4>
         <h4
         ref={bRef}
         onClick={()=>{

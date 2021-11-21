@@ -35,7 +35,6 @@ const Dashboard: React.FC = () => {
     getFollows(nameArrayConst)
   },[])
 
-
   const getFollows = (nameArray:{name: string, link: string}[]) => {
     axios.get('https://duka-backend-undefined.herokuapp.com/getFollows')
     .then((res)=>{
@@ -61,101 +60,101 @@ const Dashboard: React.FC = () => {
   }
 
   return (
-    <>
-      <body id = "myBody">
-        <img className="abstract-image" src={Abstract} alt="" />
+    <><div className="adjust-body">
+        <body id = "myBody">
+          <img className="abstract-image" src={Abstract} alt="" />
 
-        <div className="sidebar">
-          <img className="image-logo" src={LogoDuka} alt="" />
+          <div className="sidebar">
+            <img className="image-logo" src={LogoDuka} alt="" />
 
-          <div className="card-company">
-            <div className="center-wrapper-company">
-              <img className="image-company" src={Cubos} alt="" />
-              <p className="title-company">CUBOS</p>
-            </div>
+            <div className="card-company">
+              <div className="center-wrapper-company">
+                <img className="image-company" src={Cubos} alt="" />
+                <p className="title-company">CUBOS</p>
+              </div>
 
-            <div className="wrapper-company">
-              <p className="text-company">Meus talentos</p>
-              <p className="number-company">{followTalent.length}</p>
+              <div className="wrapper-company">
+                <p className="text-company">Meus talentos</p>
+                <p className="number-company">{followTalent.length}</p>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div className="container">
+          <div className="container">
 
-          <div className="page-title-wrapper">
-            <Command color="#045171" size={24} />
-            <h1 className="page-title">Seu dashboard</h1>
-          </div>
+            <div className="page-title-wrapper">
+              <Command color="#045171" size={24} />
+              <h1 className="page-title">Seu dashboard</h1>
+            </div>
 
-          <h2 className="section-title">Qual talento deseja conhecer hoje?</h2>
+            <h2 className="section-title">Qual talento deseja conhecer hoje?</h2>
 
-          <div className="talent-section">
-            <div className="search-card">
-              <div className="search-card-flex">
-                <div>
-                  <label>Busca por nome</label>
-                  <div className="search-bar">
-                    <input placeholder="Busque seu próximo talento"></input>
-                    <div className='search-bar-icon'>
-                      <Search color="#797979" size={12} />
+            <div className="talent-section">
+              <div className="search-card">
+                <div className="search-card-flex">
+                  <div>
+                    <label>Busca por nome</label>
+                    <div className="search-bar">
+                      <input placeholder="Busque seu próximo talento"></input>
+                      <div className='search-bar-icon'>
+                        <Search color="#797979" size={12} />
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                <div>
-                  <label>Estado</label>
-                  <select name="languages" id="lang">
-                    <option value="" disabled selected hidden>Selecione o estado</option>
-                    <option value="javascript">São Paulo</option>
-                    <option value="java">Rio de Janeiro</option>
-                  </select>
-                </div>
+                  <div>
+                    <label>Estado</label>
+                    <select name="languages" id="lang">
+                      <option value="" disabled selected hidden>Selecione o estado</option>
+                      <option value="javascript">São Paulo</option>
+                      <option value="java">Rio de Janeiro</option>
+                    </select>
+                  </div>
 
-                <div>
-                  <label>Cidade</label>
-                  <select name="languages" id="lang">
-                    <option value="" disabled selected hidden>Selecione a cidade</option>
-                    <option value="javascript">Mogi das Cruzes</option>
-                    <option value="java">Americana</option>
-                  </select>
-                </div>
-                <div>
-                  <label>Especialidade</label>
-                  <select name="languages" id="lang">
-                    <option value="" disabled selected hidden>Selecione a especialidade</option>
-                    <option value="javascript">JavaScript</option>
-                    <option value="java">Java</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className="search-card-flex">
-                <button  className="filter-icon filter-icon-first"  onClick = {() => { if (search){setSearch(!search)}}}>
-                  <X color="#FFFFFF" size={18} />
-                </button>
-
-                <button className="filter-icon" onClick = {() => {setSearch(!search)}}>
-                  <Search color="#FFFFFF" size={18} />
-                </button>
-              </div>
-            </div>
-
-            <div className="results-wrapper">
-              { search ? <> {nameArr&&nameArr.map((item)=> <TalentCard style ={name === item.name? {display:'none'}:{display:'unset'}} CB ={() =>{setFollowTalent([...followTalent, item.name]); nameArr&&setNameArr(nameArr.filter(el => el.name!==item.name)); updateFollows("push", item.name)}} name={item.name}  perfil = {item.link}/>)}
-               
-                <div className="pagination">
-                  <p className="pagination-text">Número de página</p>
-                  <div className="page-selected">
-                    <p className="page-number">1</p>
+                  <div>
+                    <label>Cidade</label>
+                    <select name="languages" id="lang">
+                      <option value="" disabled selected hidden>Selecione a cidade</option>
+                      <option value="javascript">Mogi das Cruzes</option>
+                      <option value="java">Americana</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label>Especialidade</label>
+                    <select name="languages" id="lang">
+                      <option value="" disabled selected hidden>Selecione a especialidade</option>
+                      <option value="javascript">JavaScript</option>
+                      <option value="java">Java</option>
+                    </select>
                   </div>
                 </div>
-              </>
-              :
-              <h2 className = "do-a-search">Descubra novos talentos realizando uma busca</h2>
-              }
+
+                <div className="search-card-flex">
+                  <button  className="filter-icon filter-icon-first"  onClick = {() => { if (search){setSearch(!search)}}}>
+                    <X color="#FFFFFF" size={18} />
+                  </button>
+
+                  <button className="filter-icon" onClick = {() => {setSearch(!search)}}>
+                    <Search color="#FFFFFF" size={18} />
+                  </button>
+                </div>
+              </div>
+
+              <div className="results-wrapper">
+                { search ? <> {nameArr&&nameArr.map((item)=> <TalentCard style ={name === item.name? {display:'none'}:{display:'unset'}} CB ={() =>{setFollowTalent([...followTalent, item.name]); nameArr&&setNameArr(nameArr.filter(el => el.name!==item.name)); updateFollows("push", item.name)}} name={item.name}  perfil = {item.link}/>)}
+                
+                  <div className="pagination">
+                    <p className="pagination-text">Número de página</p>
+                    <div className="page-selected">
+                      <p className="page-number">1</p>
+                    </div>
+                  </div>
+                </>
+                :
+                <h2 className = "do-a-search">Descubra novos talentos realizando uma busca</h2>
+                }
+              </div>
             </div>
-          </div>
 
           <h2 className="section-title">Acompanhe seus talentos</h2>
           {
@@ -222,25 +221,44 @@ const Dashboard: React.FC = () => {
               }}
               profile = {"https://avatars.githubusercontent.com/u/61032370?v=4"}
             />
-            
             : <></>
-          }
+            }
+            { followTalent.includes('Thiago')?
+              
+              <MyTalentCard 
+                name = "Thiago"
+                completeName = {"Thiago Waib Castello Branco"}
+                city = {"19 anos, Marília - SP"}
+                talent = {"Futro talento em FullStack"}
+                unfollow={()=>{
+                  nameArr && setNameArr([...nameArr, {name:"Thiago", link: "https://avatars.githubusercontent.com/u/61032370?v=4"}])
+                  setFollowTalent(followTalent.filter(talento => talento!=="Thiago"))
+                  updateFollows("pop","Thiago")
+                }}
+                profile = {"https://avatars.githubusercontent.com/u/61032370?v=4"}
+              />
+              
+              : <></>
+            }
 
-          {
-            followTalent.length>1 ? 
-            <div className="adjust-button">
-            <button className="button-load-more">
-              <p>Carregar mais talentos</p>
-            </button>
+            {
+              followTalent.length>1 ? 
+              <div className="adjust-button">
+              <button className="button-load-more">
+                <p>Carregar mais talentos</p>
+              </button>
+            </div>
+
+            :
+            <></>
+          
+            }
           </div>
-
-          :
-          <></>
-        
-          }
-        </div>
-      </body>
       
+            
+          <FooterComponent/>
+        </body>
+      </div>
     </>
   )
 }
