@@ -239,9 +239,6 @@ const Dashboard: React.FC = () => {
         
           }
         </div>
-    
-          
-        <FooterComponent/>
       </body>
       
     </>
