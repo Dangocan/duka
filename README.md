@@ -42,7 +42,7 @@ Seguindo a ideia de performance, a tecnologia Node foi escolhida pela sua compat
 
 ## 🚀 Features
 
-### :tw-1f440: Olheiros (Empresas)
+### 👀 Olheiros (Empresas)
 
 * Dashboard de descoberta de talentos
 * Dashboard de acompanhamento de talentos
