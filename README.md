@@ -61,16 +61,16 @@ Seguindo a ideia de performance, a tecnologia Node foi escolhida pela sua compat
 
 > <a href="https://github.com/Calebe-Fernandes" target="_blank">
 <img src="https://github.com/Dangocan/duka/blob/master/.github/Assets/Profiles/Calebe.svg?raw=true"
-width="80%" height="auto" alt="">
+width="60%" height="auto" alt="">
 </a></a><a href="https://github.com/Dangocan" target="_blank">
 <img src="https://github.com/Dangocan/duka/blob/master/.github/Assets/Profiles/Danilo.svg?raw=true"
-width="80%" height="auto" alt="">
+width="60%" height="auto" alt="">
 </a><a href="https://github.com/luanda-vital" target="_blank">
 <img src="https://github.com/Dangocan/duka/blob/master/.github/Assets/Profiles/Luanda.svg?raw=true"
-width="80%" height="auto" alt="">
+width="60%" height="auto" alt="">
 </a><a href="https://github.com/thiagowaib" target="_blank">
 <img src="https://github.com/Dangocan/duka/blob/master/.github/Assets/Profiles/Thiago.svg?raw=true"
-width="80%" height="auto" alt="">
+width="60%" height="auto" alt="">
 </a>
 
 <br>
