@@ -22,7 +22,7 @@ O objetivo do hackathon era idealizar uma solução que trouxesse educação em 
 
 <br>
 
-## 💻 Teconologias
+## 💻 Tecnologias
 
 <h3><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
 width="5%" height="auto">&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
